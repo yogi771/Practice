@@ -44,7 +44,7 @@ public class RSpractice117 {
 		System.out.println("Test case Pass");
 
 		// scan the name column with getText -> bEANS -> PRINT the price of the rice
-		List<String> price;
+		List<Object> price;
 		do {
 			List<WebElement> rows = driver.findElements(By.xpath("//tr/td[1]"));
 			 price = rows.stream().filter(s -> s.getText().contains("Rice")).map(s -> getPriceVeggie(s))
@@ -59,7 +59,7 @@ public class RSpractice117 {
 
 	}
   
-	private static String getPriceVeggie(WebElement s) {
+	private static Object getPriceVeggie(WebElement s) {
 		// TODO Auto-generated method stub
 		String priceValue = s.findElement(By.xpath("following-sibling::td[1]")).getText();
 		return priceValue;

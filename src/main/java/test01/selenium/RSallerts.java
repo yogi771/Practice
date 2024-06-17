@@ -13,6 +13,7 @@ public class RSallerts {
 		driver.findElement(By.cssSelector("[id=confirmbtn]")).click();
 		System.out.println(driver.switchTo().alert().getText());
 		driver.switchTo().alert().dismiss();
+		System.out.println("Sucessfully code run");
 	}
 
 }
